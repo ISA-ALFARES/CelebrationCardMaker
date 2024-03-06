@@ -1,5 +1,17 @@
+function isValidName(name) {
+    // يسمح فقط بالحروف العربية والإنجليزية والمسافات
+    var regex = /^[\u0600-\u06FF\s\u0020a-zA-Z]+$/;
+    return regex.test(name);
+}
+
 function printUserName() {
-    var userName = document.getElementById('name').value;
+    var userName = document.getElementById('name').value.trim();
+
+    if (!isValidName(userName)) {
+        alert("الرجاء إدخال اسم صالح يحتوي فقط على الحروف العربية والإنجليزية والمسافات.");
+        return;
+    }
+
     var selectedChoice = document.querySelector('input[name="choice"]:checked').value;
 
     // Determine the corresponding image URL based on the selected choice
@@ -8,22 +20,22 @@ function printUserName() {
         imageURL = 'images/card.jpeg';
         var canvasWidth = 600;
         var canvasHeight = 500;
-        var textX = 278;
-        var textY = 323;
-        var fontSize = '26px';
+        var textXPercentage = 38; 
+        var textYPercentage = 65; 
+        var fontSize = '24px';
     } else if (selectedChoice === '2') {
         imageURL = 'images/card-2.jpg';
         var canvasWidth = 800;
         var canvasHeight = 600;
-        var textX = 400;
-        var textY = 450;
+        var textXPercentage = 50; 
+        var textYPercentage = 50; 
         var fontSize = '30px';
     } else if (selectedChoice === '3') {
         imageURL = 'images/card-3.jpg';
         var canvasWidth = 500;
         var canvasHeight = 400;
-        var textX = 150;
-        var textY = 200;
+        var textXPercentage = 30; 
+        var textYPercentage = 70; 
         var fontSize = '18px';
     }
 
@@ -48,6 +60,10 @@ function printUserName() {
         // تعيين أنماط النص
         ctx.fillStyle = 'black';
         ctx.font = fontSize + ' Arial';
+
+        // تحويل النسبة المئوية إلى قيم مطلقة
+        var textX = (textXPercentage / 100) * canvasWidth; // حساب موقع النص الأفقي
+        var textY = (textYPercentage / 100) * canvasHeight; // حساب موقع النص العمودي
 
         // رسم النص على الكانفاس
         ctx.fillText(userName, textX, textY);
@@ -74,6 +90,8 @@ function printUserName() {
             '<img src="' + canvas.toDataURL('image/jpeg') + '" alt="Selected card">' +
             '<br>' +
             '<a href="' + canvas.toDataURL('image/jpeg') + '" download="selected_card.jpg" class="button">تحميل الصورة</a>' +
+            '<br>' +
+            '<button onclick="window.history.back();" class="button">العودة</button>' + // زر الرجوع للصفحة السابقة
             '</body>' +
             '</html>';
 
