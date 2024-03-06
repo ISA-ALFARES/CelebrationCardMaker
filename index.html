@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="اكتب اسمك وانشئ تصميمك بضغطة زر وخلال ثوان ">
+  <meta property="type" content="website">
+  <meta property="og:type" content="website">
+  <meta property="image" content="images/logo.png">
+  
+  <link rel="stylesheet" href="css/azzwa.css">
+  <link rel="stylesheet" href="css/all.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/necolas.github.io_normalize.css_8.0.1_normalize.css">
+      <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+  
+  <title>طابع بطاقات التهنئة</title>
+
+  <!-- Include the JavaScript file -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="back">
+    <div class="content">
+      <div class="header">
+        <img src="images/logo3.jpg" class="logo"  alt="">
+        <h3 class="text">أنشئ تهنئتك</h3><br>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="form-group">
+            <label for="name"> ألاسم:</label>
+            <input class="text-input" type="text" placeholder="أكتب اسمك" name="name" id="name" />
+          </div>
+          <H4>اكتب اسمك</H4>
+          <div class="card">
+            <div class="box">
+              <input type="radio" id="choice1" name="choice" value="1">
+              <label for="choice1"><img src="images/card.jpeg" alt=""></label>
+            </div>
+            <div class="box">
+              <input type="radio" id="choice2" name="choice" value="2" checked>
+              <label for="choice2"><img src="images/card-2.jpg" alt=""></label>
+            </div>
+            <div class="box">
+              <input type="radio" id="choice3" name="choice" value="3">
+              <label for="choice3"><img src="images/card-3.jpg" alt=""></label>
+            </div>
+          </div>
+          <input type="button" value="عرض البطاقة" onclick="printUserName()" />
+          <p class="counter">عدد البطاقات المطبوع :  100</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

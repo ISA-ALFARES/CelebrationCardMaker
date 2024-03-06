@@ -1,0 +1,208 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Cairo" , "Sans-serif";
+  direction: rtl;
+}
+:host, :root {
+  --rem: 16;
+}
+
+:root{
+  --main-transition: 0.3s;
+  --main-color: #1f1933 ;
+  --rem:16;
+}
+body{
+  text-align: center;
+  
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .content {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .content {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .content {
+    width: 1170px;
+  }
+}
+
+.back{
+  display: table;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/background-4.jpg);
+}
+
+
+/* start container section  */
+  .content {
+    min-height: calc(100% - 80px);
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 2px 29px #77777752, -1px -2px 29px #7777776b;
+    margin: auto;
+    margin-top: 10vh; 
+    margin-bottom: 20px; 
+  }
+  @media (max-width:767px){
+    .content {
+      margin: 0px 5%;
+      margin-top: 10vh; 
+      margin-bottom: 20px; 
+    }
+  }
+  
+/* end container section  */
+/* start header section  */
+.header .logo{
+  width: 300px;
+  height: auto;
+  margin-left: 1rem;
+  display: block;
+  margin: 0px auto;
+  max-width: 100%;
+  /* margin-bottom: 1rem; */
+}
+@media (max-width:767px){
+  .header .logo{
+    width: 200px;
+  }
+}
+.text{
+  letter-spacing: 2px;
+  font-weight:200;
+  font-size: 1.5rem;
+  padding-bottom: 2rem ;
+  border-bottom: 1px solid #ccc;
+}
+/* end header section  */
+/* start form section  */
+
+.content input::placeholder{
+  transition: opacity var(--main-transition);
+  -webkit-transition: opacity var(--main-transition);
+  -moz-transition: opacity var(--main-transition);
+  -ms-transition: opacity var(--main-transition);
+  -o-transition: opacity var(--main-transition);
+}
+.content input:focus::placeholder{
+  opacity: 0;
+}
+.form{
+  position: relative;
+}
+.content .form input[type="text"]{
+  width: 400px;
+  border: none;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #1f193379;
+  background-color: #f9f9f9;
+  caret-color: var(--main-color);
+  margin: 40px auto;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+@media (max-width:767px){
+.content .form input[type="text"]{
+  width: 100%;
+}
+.form-group label{
+  font-size: 20px;
+}
+}
+
+.form-group label{
+  margin-left: 20px;
+    width: 200px;
+}
+.content input:focus {
+  border-color:#1f1933; 
+}
+
+.content .form h4{
+  margin-bottom: 30px;
+}
+.content .form input[type="radio"]{
+  margin: -15px 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.content .form .card{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+  gap: 50px 20px;
+}
+
+.content .form .card .box{
+  position: relative;
+}
+.content .form .card img{
+  max-width: 250px;
+}
+@media (max-width: 991px) {
+  .content .form .card img{
+    max-width: 300px;
+  }
+  
+}
+.content  input[type="button"]{
+  padding: 15px 35px;
+  color: white;
+  border: none;
+  background-color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 30px auto 0 ;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+  .content  input[type="button"]{
+    width: fit-content;
+  }
+}
+.content  input[type="button"]:hover{
+  background-color: #2e254be5;
+}
+.content  .counter{
+  padding: 20px 0px;
+  font-size: 18px;
+  color: #777;
+}
+/* end form section  */
+
