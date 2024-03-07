@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f2f2f2; }
-        img { max-width: 25%; height: auto; margin-top: 20px; border: 5px solid #ccc; border-radius: 10px; }
-        a.button { display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; }
-        a.button:hover { background-color: #45a049; }
-    </style>
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/all.css">
+      <!-- Normalize -->
+      <link rel="stylesheet" href="css/necolas.github.io_normalize.css_8.0.1_normalize.css">
+        <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    
+    <title> بطاقة التهنئة</title>
 </head>
 <body>
     <canvas id="greetingCanvas" style="display: none;"></canvas>
-    <img id="selectedCardImage" alt="Selected card">
-    <br>
-    <a id="downloadButton" class="button">تحميل الصورة</a>
-    <br>
-    <button onclick="window.history.back();" class="button">العودة</button>
-
+    <div class="back">
+        <div class="content">
+            <div class="header">
+                <img src="images/logo3.jpg" class="logo"  alt="">
+                <h3 class="text">تم تصميم بطاقة التهننئة بنجاح </h3><br>
+            </div>
+            <div class="card">
+                <!-- Image element to display the selected card -->
+                <img id="selectedCardImage" alt="Selected card">
+            </div>
+            <!-- Button to download the generated image -->
+            <a id="downloadButton" class="button" href="#">
+                <span>حمل الصورة</span>
+                <i class="fa-solid fa-download icons"></i>
+            </a>
+            
+            <!-- Button to go back -->
+            <a href="index.html" class="button">
+                <span>العودة للرئيسية</span>
+                <i class="fa-solid fa-arrow-right-to-bracket icons"></i>
+            </a>
+            
+        </div>
+    </div>
     <script>
+        // Function to extract parameter value from URL
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -29,6 +51,7 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
+        // Get the name and choice parameters from the URL
         var userName = getParameterByName('name');
         var selectedChoice = getParameterByName('choice');
 
@@ -37,80 +60,92 @@
         var textXPercentage;
         var textYPercentage;
 
-        var words = userName.split(' '); // تقسيم النص إلى كلمات
-var numWords = words.length; // عدد الكلمات في النص
+        var words = userName.split(' '); // Split the name into words
+        var numWords = words.length; // Count the number of words in the name
 
-// تعيين الحجم والموقع بناءً على عدد الكلمات
-switch (selectedChoice) {
-    case '1':
-        imageURL = 'images/card.jpeg';
-        if (numWords === 1) {
-            fontSize = '40px';
-            textXPercentage = 45;
-            textYPercentage = 65;
-        } else if (numWords === 2) {
-            fontSize = '30px';
-            textXPercentage = 45;
-            textYPercentage = 65;
-        } else if (numWords === 3) {
-            fontSize = '25px';
-            textXPercentage = 45;
-            textYPercentage = 65;
-        } else {
-            fontSize = '20px';
-            textXPercentage = 45;
-            textYPercentage = 65;
+        // Set size and position based on the number of words
+        switch (selectedChoice) {
+            case '1':
+                imageURL = 'images/card.jpeg';
+                if (numWords === 1) {
+                    fontSize = '90px';
+                    textXPercentage = 43;
+                    textYPercentage = 65;
+                } else if (numWords === 2) {
+                    fontSize = '69px';
+                    textXPercentage = 39;
+                    textYPercentage = 65;
+                } else if (numWords === 3) {
+                    fontSize = '70px';
+                    textXPercentage = 31;
+                    textYPercentage = 65;
+                } else if(numWords === 4) {
+                    fontSize = '66px';
+                    textXPercentage = 25;
+                    textYPercentage = 65;
+                }else{
+                    fontSize = '63px';
+                    textXPercentage = 20;
+                    textYPercentage = 65;
+                }
+                break;
+            case '2':
+                imageURL = 'images/card-2.jpg';
+                if (numWords === 1) {
+                    fontSize = '420px';
+                    textXPercentage = 47;
+                    textYPercentage = 67.6;
+                } else if (numWords === 2) {
+                    fontSize = '398px';
+                    textXPercentage = 40;
+                    textYPercentage = 68;
+                } else if (numWords === 3) {
+                    fontSize = '350px';
+                    textXPercentage = 33;
+                    textYPercentage = 67.6;
+                } else if(numWords === 4) {
+                    fontSize = '320px';
+                    textXPercentage = 28;
+                    textYPercentage = 69;
+                }else if(numWords === 5){
+                    fontSize = '300px';
+                    textXPercentage = 25;
+                    textYPercentage = 67.9;
+                }else{
+                    fontSize = '250px';
+                    textXPercentage = 22;
+                    textYPercentage = 67.9;
+                }
+                break;
+            case '3':
+                imageURL = 'images/card-3.jpg';
+                if (numWords === 1) {
+                    fontSize = '200px';
+                    textXPercentage = 45;
+                    textYPercentage = 84;
+                } else if (numWords === 2) {
+                    fontSize = '190px';
+                    textXPercentage = 35;
+                    textYPercentage = 84;
+                } else if (numWords === 3) {
+                    fontSize = '160px';
+                    textXPercentage = 34;
+                    textYPercentage = 83.7;
+                }else if (numWords === 4) {
+                    fontSize = '140px';
+                    textXPercentage = 30;
+                    textYPercentage = 83.7; 
+                }else {
+                    fontSize = '140px';
+                    textXPercentage = 28;
+                    textYPercentage = 83.7;
+                }
+                break;
+            default:
+                break;
         }
-        break;
-    case '2':
-        imageURL = 'images/card-2.jpg';
-        if (numWords === 1) {
-            fontSize = '400px';
-            textXPercentage = 50;
-            textYPercentage = 65;
-        } else if (numWords === 2) {
-            fontSize = '300px';
-            textXPercentage = 50;
-            textYPercentage = 65;
-        } else if (numWords === 3) {
-            fontSize = '250px';
-            textXPercentage = 50;
-            textYPercentage = 65;
-        } else {
-            fontSize = '200px';
-            textXPercentage = 50;
-            textYPercentage = 65;
-        }
-        break;
-    case '3':
-        imageURL = 'images/card-3.jpg';
-        if (numWords === 1) {
-            fontSize = '200px';
-            textXPercentage = 45;
-            textYPercentage = 84;
-        } else if (numWords === 2) {
-            fontSize = '190px';
-            textXPercentage = 35;
-            textYPercentage = 84;
-        } else if (numWords === 3) {
-            fontSize = '160px';
-            textXPercentage = 34;
-            textYPercentage = 83.7;
-        }else if (numWords === 4) {
-            fontSize = '140px';
-            textXPercentage = 30;
-            textYPercentage = 83.7; 
-        }else {
-            fontSize = '140px';
-            textXPercentage = 28;
-            textYPercentage = 83.7;
-        }
-        break;
-    default:
-        break;
-}
 
-
+        // Create a new image element and draw text on it
         var img = new Image();
         img.crossOrigin = 'anonymous';
         img.onload = function () {
@@ -125,6 +160,7 @@ switch (selectedChoice) {
             var selectedCardImage = document.getElementById('selectedCardImage');
             selectedCardImage.src = canvas.toDataURL('image/jpeg');
 
+            // Set the download button attributes to download the image
             var downloadButton = document.getElementById('downloadButton');
             downloadButton.href = canvas.toDataURL('image/jpeg');
             downloadButton.download = 'selected_card.jpg';
