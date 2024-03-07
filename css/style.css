@@ -84,11 +84,11 @@ body{
 }
 @media (max-width:767px){
   .header .logo{
-    width: 200px;
+    width: bold;
   }
 }
 .text{
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight:200;
   font-size: 1.5rem;
   padding-bottom: 2rem ;
