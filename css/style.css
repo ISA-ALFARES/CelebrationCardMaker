@@ -25,19 +25,19 @@ body{
 
 /* Small */
 @media (min-width: 768px) {
-  .content {
+  .container {
     width: 750px;
   }
 }
 /* Medium */
 @media (min-width: 992px) {
-  .content {
+  .container {
     width: 970px;
   }
 }
 /* Large */
 @media (min-width: 1200px) {
-  .content {
+  .container {
     width: 1170px;
   }
 }
@@ -52,7 +52,7 @@ body{
 
 
 /* start container section  */
-  .content {
+  .container {
     min-height: calc(100% - 80px);
     padding: 30px 30px;
     background-color: #fff;
@@ -64,7 +64,7 @@ body{
     margin-bottom: 20px; 
   }
   @media (max-width:767px){
-    .content {
+    .container {
       margin: 0px 5%;
       margin-top: 10vh; 
       margin-bottom: 20px; 
@@ -97,20 +97,20 @@ body{
 /* end header section  */
 /* start form section  */
 
-.content input::placeholder{
+.container input::placeholder{
   transition: opacity var(--main-transition);
   -webkit-transition: opacity var(--main-transition);
   -moz-transition: opacity var(--main-transition);
   -ms-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
 }
-.content input:focus::placeholder{
+.container input:focus::placeholder{
   opacity: 0;
 }
 .form{
   position: relative;
 }
-.content .form input[type="text"]{
+.container .form input[type="text"]{
   width: 400px;
   border: none;
   padding: 15px;
@@ -127,7 +127,7 @@ body{
 }
 
 @media (max-width:767px){
-.content .form input[type="text"]{
+.container .form input[type="text"]{
   width: 100%;
 }
 .form-group label{
@@ -139,14 +139,14 @@ body{
   margin-left: 20px;
     width: 200px;
 }
-.content input:focus {
+.container input:focus {
   border-color:#1f1933; 
 }
 
-.content .form h4{
+.container .form h4{
   margin-bottom: 30px;
 }
-.content .form input[type="radio"]{
+.container .form input[type="radio"]{
   margin: -15px 0;
   position: absolute;
   left: 50%;
@@ -154,25 +154,25 @@ body{
   transform: translateX(-50%);
   cursor: pointer;
 }
-.content .form .card{
+.container .form .card{
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
   gap: 50px 20px;
 }
 
-.content .form .card .box{
+.container .form .card .box{
   position: relative;
 }
-.content .form .card img{
+.container .form .card img{
   max-width: 250px;
 }
 @media (max-width: 991px) {
-  .content .form .card img{
+  .container .form .card img{
     max-width: 300px;
   }
   
 }
-.content  input[type="button"]{
+.container  input[type="button"]{
   padding: 15px 35px;
   color: white;
   border: none;
@@ -193,14 +193,14 @@ body{
   -o-transition: var(--main-transition);
 }
 @media (max-width: 767px) {
-  .content  input[type="button"]{
+  .container  input[type="button"]{
     width: fit-content;
   }
 }
-.content  input[type="button"]:hover{
+.container  input[type="button"]:hover{
   background-color: #2e254be5;
 }
-.content  .counter{
+.container  .counter{
   padding: 20px 0px;
   font-size: 18px;
   color: #777;

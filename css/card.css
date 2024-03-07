@@ -15,19 +15,19 @@ body
 }
 /* Small */
 @media (min-width: 768px) {
-  .content {
+  .container {
     width: 750px;
   }
 }
 /* Medium */
 @media (min-width: 992px) {
-  .content {
+  .container {
     width: 970px;
   }
 }
 /* Large */
 @media (min-width: 1200px) {
-  .content {
+  .container {
     width: 1170px;
   }
 }
@@ -39,7 +39,7 @@ body
   background-image: url(../images/background-4.jpg);
 }
 /* start container section  */
-.content {
+.container {
   min-height: calc(100% - 80px);
   padding: 30px 30px;
   background-color: #fff;
@@ -51,7 +51,7 @@ body
   margin-bottom: 20px; 
 }
 @media (max-width:767px){
-  .content {
+  .container {
     margin: 0px 5%;
     margin-top: 10vh; 
     margin-bottom: 20px; 
