@@ -15,12 +15,6 @@
       url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff') format('woff'),
       url('/AzzwaFont/FrutigerLTArabic65Bold.ttf') format('truetype');
 }
-@font-face {
-font-family:myFont; 
-src: url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff2') format('woff2'), 
-url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff') format('woff'),
-url('/AzzwaFont/FrutigerLTArabic65Bold.ttf') format('truetype');
- }
 body 
 { 
   text-align: center; 
@@ -118,5 +112,5 @@ img {
     margin-left:11px;
 }
 .button span {
-  margin-right: 5px; /* تعديل المسافة حسب الحاجة */
+  margin-right: 5px; 
 }

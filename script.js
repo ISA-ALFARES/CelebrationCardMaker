@@ -6,8 +6,6 @@ function isValidName(name) {
 // Print the user's name and display it on the card
 function printUserName() {
 
-    var textBox = document.getElementById("text");
-    textBox.value++;
     var userName = document.getElementById('name').value.trim();
 
     // If the entered name is not valid, show an alert

@@ -199,27 +199,6 @@ body{
     width: fit-content;
   }
 }
-.container  input[type="button"]:hover{
-  background-color: #2e254be5;
-}
-.container .count  input[type="text"]{
-  padding: 0px;
-  margin: 0;
-  width: 10px;
-  font-size: 18px;
-  color: #777;
-outline: none;
-border: none;
-background: none;
-outline: none;
-cursor: inherit;
-user-select: none;
-}
-.text-counter{
-  padding-top: 20px;
-  padding-bottom: 5px;
-  font-size: 18px;
-  color: #777;
-}
+
 /* end form section  */
 
