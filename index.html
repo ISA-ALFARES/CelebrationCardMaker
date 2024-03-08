@@ -14,6 +14,13 @@
     <meta property="og:description" content="مرحبًا بك في عزوة، الموقع الذي يوفر لك تجربة فريدة في إنشاء بطاقات التهنئة بطريقة سهلة وممتعة. قم بكتابة اسمك واختيار التصميم المفضل لديك، وسنقوم بتوليد بطاقة تهنئة مذهلة بضغطة زر واحدة. استمتع بمشاركة مشاعر الفرح والتهنئة مع من تحب بطريقة مميزة ومبتكرة.">
     <meta property="og:image" content="images/logo3.jpg">
     <title>مولد بطاقات التهنئة - إنشاء بطاقات تهنئة فريدة بسهولة</title>
+    <script>
+      let counter = 0; // قيمة العنصر
+  function incrementValue() {
+      counter++;
+      document.getElementById("counter").textContent = counter;
+  }
+</script>
   </head>
   </body>
   </html>
@@ -38,7 +45,7 @@
     <div class="container">
       <div class="header">
         <img src="images/logo3.jpg" class="logo"  alt="">
-        <h3 class="text">أنشئ تهنئتك</h3><br>
+        <h3 class="text">أنشئ تهنئتك بمناسبة حلول شهر رمضان المبارك</h3><br>
       </div>
       <div class="form">
         <form action="">
@@ -62,9 +69,14 @@
             </div>
           </div>
           <input type="button" value="عرض البطاقة" onclick="printUserName()" />
-        </form>
+          <div class="count">
+            <p class="text-counter">عدد البطاقات المطبوعة : </p>
+            <input type="text" id="text" class="counter" value="1" readonly/>
+          </div>
+          </form>
       </div>
     </div>
   </div>
+
 </body>
 </html>

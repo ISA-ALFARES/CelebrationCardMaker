@@ -6,9 +6,21 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Tajawal', sans-serif;
+  font-family:  'Tajawal', sans-serif;
   direction: rtl;
 }
+@font-face {
+  font-family: 'MyLocalFont'; 
+  src: url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff2') format('woff2'), 
+      url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff') format('woff'),
+      url('/AzzwaFont/FrutigerLTArabic65Bold.ttf') format('truetype');
+}
+@font-face {
+font-family:myFont; 
+src: url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff2') format('woff2'), 
+url('/AzzwaFont/Bahij_TheSansArabic-Bold.woff') format('woff'),
+url('/AzzwaFont/FrutigerLTArabic65Bold.ttf') format('truetype');
+ }
 body 
 { 
   text-align: center; 
@@ -65,6 +77,7 @@ body
     margin-bottom: 5px;
     text-align: center;
     letter-spacing: 1px;
+    font-family: 'MyLocalFont';
 }
 img { 
     max-width: 50%;
@@ -73,6 +86,7 @@ img {
     border: 5px solid #ccc;
     border-radius: 10px;
     margin-bottom: 20px;
+
   }
 
     @media (max-width:767px){

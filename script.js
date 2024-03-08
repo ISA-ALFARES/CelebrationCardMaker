@@ -3,9 +3,11 @@ function isValidName(name) {
     var regex = /^[\u0600-\u06FF\s\u0020a-zA-Z]+$/; // Allows only Arabic and English letters and spaces
     return regex.test(name);
 }
-
 // Print the user's name and display it on the card
 function printUserName() {
+
+    var textBox = document.getElementById("text");
+    textBox.value++;
     var userName = document.getElementById('name').value.trim();
 
     // If the entered name is not valid, show an alert
@@ -14,6 +16,7 @@ function printUserName() {
         return;
     }
 
+    
     // Get the selected choice
     var selectedChoice = document.querySelector('input[name="choice"]:checked').value;
 

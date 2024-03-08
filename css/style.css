@@ -12,6 +12,7 @@
   --rem: 16;
 }
 
+
 :root{
   --main-transition: 0.3s;
   --main-color: #1f1933 ;
@@ -92,6 +93,8 @@ body{
   font-size: 1.5rem;
   padding-bottom: 2rem ;
   border-bottom: 1px solid #ccc;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  
 }
 /* end header section  */
 /* start form section  */
@@ -199,8 +202,22 @@ body{
 .container  input[type="button"]:hover{
   background-color: #2e254be5;
 }
-.container  .counter{
-  padding: 20px 0px;
+.container .count  input[type="text"]{
+  padding: 0px;
+  margin: 0;
+  width: 10px;
+  font-size: 18px;
+  color: #777;
+outline: none;
+border: none;
+background: none;
+outline: none;
+cursor: inherit;
+user-select: none;
+}
+.text-counter{
+  padding-top: 20px;
+  padding-bottom: 5px;
   font-size: 18px;
   color: #777;
 }
