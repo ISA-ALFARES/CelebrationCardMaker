@@ -200,5 +200,19 @@ body{
   }
 }
 
+/* start counter element */
+.counter-element {
+  color: #777;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.counter-element span{
+  display: block;
+  font-weight: bold;
+  margin: 0;
+  color: #777;
+  margin-top: 4px;
+}
+/* end counter element */
 /* end form section  */
 
